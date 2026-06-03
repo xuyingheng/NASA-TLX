@@ -5,35 +5,129 @@ var right      = new Array();
 var def        = new Array();
 var NUM_SCALES = 6;
 
-scale[0]  = "知的・知覚的要求"; 
-left[0]   = "小さい";
-right[0]  = "大きい";
-def[0]    = "<p>どの程度の知的・知覚的活動(考える、決める、計算する、記憶する、見るなど)を必要としましたか。<br>課題はやさしかったですか。それとも難しかったですか。<br>単純でしたか。それとも複雑でしたか。<br>正確さが求められましたか。それとも大ざっぱでよかったですか。</p>";
+scale[0] =
+"精神的要求 / Mental Demand / 心理负荷";
+left[0] =
+"低い / Low / 低";
+right[0] =
+"高い / High / 高";
+def[0] =
+`<p>
+点群シーン内の物体を識別し、
+適切にラベル付けするために、
+どの程度の精神的・知覚的努力が必要でしたか。<br><br>
 
-scale[1]  = "身体的要求"; 
-left[1]   = "小さい";
-right[1]  = "大きい";
-def[1]    = "<p>どの程度の身体的活動(押す、引く、回す、制御する、動き回るなど)を必要としましたか。<br>作業はラクでしたか。それともキツかったですか。<br>ゆっくりできましたか。それともキビキビやらなければなりませんでしたか。<br>休み休みできましたか。それとも働きづめでしたか。</p>";
+How much mental and perceptual activity was required
+to identify and annotate objects in the point cloud scene?<br><br>
 
-scale[2]  = "タイムプレッシャー"; 
-left[2]   = "弱い";
-right[2]  = "強い";
-def[2]    = "<p>仕事のペースや課題が発生する頻度のために感じる時間的切迫感はどの程度でしたか。<br>ペースはゆっくりとして余裕があるものでしたか。それとも速くて余裕のないものでしたか。</p>";
+在点云场景中识别并标注目标物体时，
+您感受到多大的心理和认知负担？
+</p>`;
 
-scale[3]  = "作業成績"; 
-left[3]   = "良い";
-right[3]  = "悪い";
-def[3]    = "<p>作業指示者によって設定された課題の目標をどの程度達成できたと思いますか。<br>目標の達成に関して自分の作業成績にどの程度満足していますか。</p>";
+scale[1] =
+"身体的要求 / Physical Demand / 身体负荷";
 
-scale[4]  = "努力"; 
-left[4]   = "少ない";
-right[4]  = "多い";
-def[4]    = "<p>作業成績のレベルを達成・維持するために、精神的・身体的にどの程度一生懸命に作業しなければなりませんでしたか。</p>";
+left[1] =
+"低い / Low / 低";
 
-scale[5]  = "フラストレーション"; 
-left[5]   = "低い";
-right[5]  = "高い";
-def[5]    = "<p>作業中に、不安感、落胆、いらいら、ストレス、悩みをどの程度感じましたか。あるいは逆に、安心感、満足感、充足感、楽しさ、リラックスをどの程度感じましたか。</p>";
+right[1] =
+"高い / High / 高";
+
+def[1] =
+`<p>
+コントローラ操作や視点調整など、
+どの程度の身体的活動が必要でしたか。<br><br>
+
+How much physical activity was required,
+including controller operation and viewpoint adjustment?<br><br>
+
+包括控制器操作和视角调整在内，
+您感受到多大的身体负担？
+</p>`;
+
+scale[2] =
+"時間的要求 / Temporal Demand / 时间压力";
+
+left[2] =
+"低い / Low / 低";
+
+right[2] =
+"高い / High / 高";
+
+def[2] =
+`<p>
+制限時間内でアノテーションを行う際、
+どの程度時間的プレッシャーを感じましたか。<br><br>
+
+How much time pressure did you feel
+while completing the annotation task?<br><br>
+
+在完成标注任务时，
+您感受到多大的时间压力？
+</p>`;
+
+scale[3] =
+"作業達成度 / Performance / 任务完成度";
+
+left[3] =
+"良い / Good / 好";
+
+right[3] =
+"悪い / Poor / 差";
+
+def[3] =
+`<p>
+自分のアノテーション結果に
+どの程度満足していますか。<br><br>
+
+How successful do you think you were
+in accomplishing the annotation task?<br><br>
+
+您认为自己的标注结果完成得如何？
+</p>`;
+
+scale[4] =
+"努力 / Effort / 努力程度";
+
+left[4] =
+"少ない / Low / 低";
+
+right[4] =
+"多い / High / 高";
+
+def[4] =
+`<p>
+アノテーション作業を達成するために、
+どの程度努力しましたか。<br><br>
+
+How hard did you have to work
+to accomplish the annotation task?<br><br>
+
+为了完成标注任务，
+您付出了多大的努力？
+</p>`;
+
+scale[5] =
+"不満 / Frustration / 挫折感";
+
+left[5] =
+"低い / Low / 低";
+
+right[5] =
+"高い / High / 高";
+
+def[5] =
+`<p>
+作業中にどの程度ストレス、
+苛立ち、不安を感じましたか。<br><br>
+
+How insecure, discouraged,
+irritated, stressed, or annoyed were you?<br><br>
+
+在任务过程中，
+您感受到多大的压力、
+挫败感或烦躁感？
+</p>`;
 
 window.addEventListener('load', OnLoad);
 function OnLoad() {}
